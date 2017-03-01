@@ -81,7 +81,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="widget no-border m-0">
-              <ul class="styled-icons icon-dark icon-theme-colored flip sm-pull-none sm-text-center">
+              <ul class="styled-icons icon-dark icon-theme-colored flip sm-pull-none sm-text-center" style="float:right;">
                 <li><a href="#donate"><i class=" flaticon-charity-make-an-online-donation font-60">
                </i></a>
                 </li>
@@ -410,7 +410,7 @@
                   data-splitin="none" 
                   data-splitout="none" 
                   data-responsive_offset="on"
-                  style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">Funding from donors that allows us<br>  to have a direct and positive impact on children.
+                  style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;"><p style="background-color: rgba(0,0,0,0.30);padding:10px;">Funding from donors that allows us<br>  to have a direct and positive impact on children.</p>
                 </div>
 
                 <!-- LAYER NR. 4 -->
@@ -706,7 +706,7 @@
         <div class="section-content">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6">
-              <h3 class="text-uppercase title line-bottom mt-0 mb-30"><i class="fa fa-cc-mastercard text-theme-colored mr-10"></i>Make a Donation <span class="text-theme-colored">Now!</span></h3><p>A $100 donation will give 5 children their own Bertie Bear Kit.</p><br>
+              <h3 class="text-uppercase title line-bottom mt-0 mb-30"><i class="fa fa-cc-mastercard text-theme-colored mr-10"></i><i class="fa fa-cc-visa text-theme-colored mr-10"></i><i class="fa fa-credit-card text-theme-colored mr-10"></i>Make a Donation <span class="text-theme-colored">Now!</span></h3><p>A $100 donation will give 5 children their own Bertie Bear Kit.</p><br>
 
               <!-- ===== START: Paypal Both Onetime/Recurring Form ===== -->
               <form id="paypal_donate_form_onetime_recurring">
@@ -748,9 +748,8 @@
                   <div class="col-sm-6">
                     <div class="form-group mb-20">
                       <label><strong>Currency</strong></label>
-                      <select name="currency_code" class="form-control">
-                        <option value="">Select Currency</option>
-                        <option value="USD" selected="selected">USD - U.S. Dollars</option>
+                      <select name="currency_code" class="form-control" disabled>
+					  <option value="USD" selected="selected" >USD - U.S. Dollars</option>
                       </select>
                     </div>
                   </div>
@@ -864,7 +863,7 @@
                 <input type="hidden" name="lc" value="US">
                 <input type="hidden" name="bn" value="PP-DonationsBF">
                 <input type="hidden" name="return" value="http://www.yoursite.com/thankyou.html">
-                <input type="hidden" name="cancel_return" value="http://www.yoursite.com/paymentcancel.html">
+                <input type="hidden" name="cancel_return" value="/index.html">
                 <input type="hidden" name="notify_url" value="http://www.yoursite.com/notifypayment.php">
                 <input type="submit" name="submit">
               </form>
@@ -923,16 +922,16 @@
     <section id="pcn" class="divider parallax layer-overlay overlay-dark-6" data-bg-img="images/manPray1920x1280.jpg" data-parallax-ratio="0.7">
       <div class="container pt-110 pb-110">
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-8">
             <h3 class="text-white font-24 font-weight-600 mt-0 mb-5">The Wilbert Foundation supports the</h3>
             <h2 class="text-white font-36 text-uppercase font-weight-600 mt-0">Pediatric Chaplains <span class="text-theme-colored">Network</span></h2>
             <p class="text-white">The Wilbert Foundation supports the Pediatric Chaplains Network -- a non-profit organization comprised of pediatric chaplains across the US and Canada that specializes in the care of children. Through the Pediatric Chaplains Institute, the Foundation sponsors grief training for professional chaplains hired into pediatric settings.</p>
             <p class="text-white">The primary goal of the institute is to equip chaplains with important resources to enhance their clinical skills and provide quality spiritual care to children and their families in hospitals or other healthcare settings. Specifically, training addresses age-specific competencies, spiritual needs and assessment, and end-of-life issues including bereavement support.</p>
             <a class="btn btn-lg btn-theme-colored mt-15" href="http://www.pediatricchaplains.org/" target="_blank">Learn More</a>
           </div>          
-          <div class="col-md-5">
+          <div class="col-md-4">
             <div class="fluid-video-wrapper mt-sm-60">
-              <img src="images/pcnLogo.png" style="padding:25px;">
+              <img src="images/pcnLogo.png" style="padding:80px;">
             </div>
           </div>
         </div>
@@ -1149,7 +1148,7 @@
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input name="form_subject" class="form-control required" type="text" placeholder="How did you hear about us?">
+                    <input name="form_subject" class="form-control required" type="text" placeholder="Website Inquiry">
                   </div>
                 </div>
                 <div class="col-sm-6">
@@ -1164,7 +1163,7 @@
               </div>
               <div class="form-group">
                 <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                <button type="submit" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" data-loading-text="Please wait...">Send your message</button>
+                <button type="submit" name="submit" value="submitForm" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px" data-loading-text="Please wait...">Send your message</button>
                 <button type="reset" class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px">Reset</button>
               </div>
             </form>
@@ -1187,7 +1186,7 @@
                       }
                       form_btn.prop('disabled', false).html(form_btn_old_msg);
                       $(form_result_div).html(data.message).fadeIn('slow');
-                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 10000);
                     }
                   });
                 }
@@ -1206,13 +1205,25 @@
       <div class="row border-bottom-black">
         <div class="col-sm-6 col-md-6">
           <div class="widget dark">
+		  <div class="col-sm-3 col-md-3">
             <img class="mt-10 mb-20" alt="" src="images/logo130x185.jpg">
-            <p>2913 Gardner Road, Broadview, IL 60155</p>
+			</div>
+			  <div class="col-sm-7 col-md-7">
+            
             <ul class="list mt-5">
+			<li class="m-0 pl-10 pr-10">2913 Gardner Road, Broadview, IL 60155</li>
               <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="tel:18889452378">1.888.945.2378</a> </li>
               <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="mailto:wilbertfoundation@wilbertinc.com">wilbertfoundation@wilbertinc.com</a> </li>
               <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"></i> <a class="text-gray" href="index.html">www.wilbertfoundation.org</a> </li>
-            </ul>
+           
+			<li class="m-0 pl-10 pr-10">
+			<h5 class="widget-title mb-10">Call Us Now</h5>
+            <div class="text-gray"><a href="tel:18889452378">
+              1.888.945.2378</a>
+            </div>
+			</li>
+			 </ul>
+			</div>
           </div>
         </div>
         <div class="col-sm-6 col-md-6">
@@ -1224,17 +1235,8 @@
               <li><a href="http://www.wilbertwma.com" target="_blank">WMA</a></li>     
             </ul>
           </div>
-        </div>
-      </div>
-        <div class="col-md-6">
-          <div class="widget dark">
-            <h5 class="widget-title mb-10">Call Us Now</h5>
-            <div class="text-gray"><a href="tel:18889452378">
-              1.888.945.2378</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
+		  
+		  		 <div class="col-md-6">
           <div class="widget dark">
             <h5 class="widget-title mb-10">Connect With Us</h5>
             <ul class="styled-icons icon-dark icon-theme-colored icon-circled icon-sm">
@@ -1242,6 +1244,14 @@
             </ul>
           </div>
         </div>
+		  
+        </div>
+		
+
+		
+      </div>
+        
+       
       </div>
     </div>
     <div class="footer-bottom bg-black-333">
