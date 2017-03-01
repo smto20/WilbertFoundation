@@ -1056,7 +1056,7 @@ section > .container-fluid {
   }
 }
 .menuzord-brand img {
-  max-height: 38px;
+  max-height: 100px;
 }
 /* -------- Inner Header ---------- */
 .inner-header .title {
@@ -1632,7 +1632,8 @@ section > .container-fluid {
   .boxed-layout .header .navbar-default .navbar-collapse {
     margin-right: 15px;
   }
-  .boxed-layout .navbar-header {
+  .boxed-layout .navbar-
+  {
     padding: 15px 0;
   }
   .boxed-layout .navbar-collapse .navbar-nav li a .caret {
