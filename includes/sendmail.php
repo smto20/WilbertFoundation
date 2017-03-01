@@ -2,7 +2,7 @@
 
 if(isset($_POST['submit']) && $_POST['submit'] == 'submitForm'){
 	
-	$to = 'panku63207@gmail.com'; // Your Email Address
+	$to = 'wilbertfoundation@wilbertinc.com'; // Your Email Address
 	
 	$name = $_POST['form_name'];
 	$email = $_POST['form_email'];
@@ -18,7 +18,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'submitForm'){
 
 	$referrer = $_SERVER['HTTP_REFERER'] ? '<br><br><br>This Form was submitted from: ' . $_SERVER['HTTP_REFERER'] : '';
 	
-	$subject = 'Contact form from Website';
+	$subject = 'Contact form Welbert Foundation';
 	$body = "$name $email $phone $inquiry $message $referrer";
 	
 	$headers = '';
