@@ -8,3 +8,27 @@ theme. But don't modify style-main.css file.
 */
 
 /* Your custom css codes start here: */
+
+@media (min-width: 901px) {
+  .header-nav-wrapper > .container {
+    width: 100%;
+  }
+
+  .menuzord-brand {
+    margin: 0;
+  }
+
+  .menuzord-brand img {
+    max-height: 160px;
+  }
+
+  .menuzord-menu > li {
+    margin: 30px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-nav-wrapper > .container {
+    width: 970px;
+  }
+}
