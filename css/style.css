@@ -46,3 +46,7 @@ theme. But don't modify style-main.css file.
   align-items: center;
   min-height: 66.666vw;
 }
+
+.prefix-dollar::before {
+  content: '$';
+}
