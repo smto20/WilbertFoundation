@@ -40,3 +40,9 @@ theme. But don't modify style-main.css file.
 .text-shadow {
   text-shadow: 0 0 0.25rem #000;
 }
+
+.parallax-large {
+  display: flex;
+  align-items: center;
+  min-height: 66.666vw;
+}
