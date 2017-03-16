@@ -36,3 +36,7 @@ theme. But don't modify style-main.css file.
 .menuzord-menu > li a.menuzord-donate {
   color: #3DB4D9;
 }
+
+.text-shadow {
+  text-shadow: 0 0 0.25rem #000;
+}
